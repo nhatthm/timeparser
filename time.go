@@ -23,34 +23,22 @@ func Parse(s string) (time.Time, error) {
 }
 
 // ParsePeriod returns a time period from given input.
-func ParsePeriod(from, to string) (start *time.Time, end *time.Time, err error) {
-	if from == "" && to == "" {
-		return nil, nil, nil
+func ParsePeriod(from, to string) (time.Time, time.Time, error) {
+	s, err := Parse(from)
+	if err != nil {
+		return time.Time{}, time.Time{}, err
 	}
 
-	if from != "" {
-		s, err := Parse(from)
-		if err != nil {
-			return nil, nil, err
-		}
-
-		start = &s
+	e, err := Parse(to)
+	if err != nil {
+		return time.Time{}, time.Time{}, err
 	}
 
-	if to != "" {
-		e, err := Parse(to)
-		if err != nil {
-			return nil, nil, err
-		}
-
-		end = &e
+	if s.After(e) {
+		return time.Time{}, time.Time{}, ErrInvalidTimePeriod
 	}
 
-	if start != nil && end != nil && start.After(*end) {
-		return nil, nil, ErrInvalidTimePeriod
-	}
-
-	return start, end, nil
+	return s, e, nil
 }
 
 // TimePtr returns a pointer to the given time.Time.

@@ -60,15 +60,12 @@ func TestParse(t *testing.T) {
 func TestParsePeriod(t *testing.T) {
 	t.Parallel()
 
-	tsStr := "2020-01-02T03:04:05Z"
-	ts := time.Date(2020, 1, 2, 3, 4, 5, 0, time.UTC)
-
 	testCases := []struct {
 		scenario      string
 		from          string
 		to            string
-		expectedStart *time.Time
-		expectedEnd   *time.Time
+		expectedStart time.Time
+		expectedEnd   time.Time
 		expectedError string
 	}{
 		{
@@ -77,29 +74,26 @@ func TestParsePeriod(t *testing.T) {
 			expectedError: `parsing time "foobar" as "2006-01-02": cannot parse "foobar" as "2006"`,
 		},
 		{
+			scenario:      "from is empty",
+			expectedError: `parsing time "" as "2006-01-02": cannot parse "" as "2006"`,
+		},
+		{
 			scenario:      "invalid to",
+			from:          "2020-01-02T03:04:05Z",
 			to:            "foobar",
 			expectedError: `parsing time "foobar" as "2006-01-02": cannot parse "foobar" as "2006"`,
 		},
 		{
-			scenario: "from and to are empty",
-		},
-		{
-			scenario:    "from is empty",
-			to:          tsStr,
-			expectedEnd: timeparser.TimePtr(ts),
-		},
-		{
 			scenario:      "to is empty",
-			from:          tsStr,
-			expectedStart: timeparser.TimePtr(ts),
+			from:          "2020-01-02T03:04:05Z",
+			expectedError: `parsing time "" as "2006-01-02": cannot parse "" as "2006"`,
 		},
 		{
 			scenario:      "from and to are not empty and valid",
 			from:          "2020-01-02T03:04:05Z",
 			to:            "2020-02-02T03:04:05Z",
-			expectedStart: timeparser.TimePtr(time.Date(2020, 1, 2, 3, 4, 5, 0, time.UTC)),
-			expectedEnd:   timeparser.TimePtr(time.Date(2020, 2, 2, 3, 4, 5, 0, time.UTC)),
+			expectedStart: time.Date(2020, 1, 2, 3, 4, 5, 0, time.UTC),
+			expectedEnd:   time.Date(2020, 2, 2, 3, 4, 5, 0, time.UTC),
 		},
 		{
 			scenario:      "from and to are not empty and invalid",
@@ -126,4 +120,12 @@ func TestParsePeriod(t *testing.T) {
 			}
 		})
 	}
+}
+
+func TestTimePtr(t *testing.T) {
+	t.Parallel()
+
+	ts := time.Date(2020, 1, 2, 3, 4, 5, 0, time.UTC)
+
+	assert.Equal(t, &ts, timeparser.TimePtr(ts))
 }
