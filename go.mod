@@ -1,4 +1,4 @@
-module github.com/nhatthm/timeparser
+module go.nhat.io/timeparser
 
 go 1.17
 
