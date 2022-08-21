@@ -4,8 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nhatthm/timeparser"
 	"github.com/stretchr/testify/assert"
+
+	"go.nhat.io/timeparser"
 )
 
 func TestParse(t *testing.T) {
