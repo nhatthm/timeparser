@@ -5,6 +5,7 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 
 	"go.nhat.io/timeparser"
 )
@@ -50,9 +51,9 @@ func TestParse(t *testing.T) {
 			assert.Equal(t, tc.expectedResult, result)
 
 			if tc.expectedError == "" {
-				assert.NoError(t, err)
+				require.NoError(t, err)
 			} else {
-				assert.EqualError(t, err, tc.expectedError)
+				require.EqualError(t, err, tc.expectedError)
 			}
 		})
 	}
@@ -115,9 +116,9 @@ func TestParsePeriod(t *testing.T) {
 			assert.Equal(t, tc.expectedEnd, end)
 
 			if tc.expectedError == "" {
-				assert.NoError(t, err)
+				require.NoError(t, err)
 			} else {
-				assert.EqualError(t, err, tc.expectedError)
+				require.EqualError(t, err, tc.expectedError)
 			}
 		})
 	}
