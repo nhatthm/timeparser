@@ -1,0 +1,19 @@
+README.md
+  s_39d0bbc14cf3a4::t_0dcf9caf5ecd1f 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "284f39a14e6d05adf1485bb1f046397fc92db961",
+  "prompts": {},
+  "sessions": {
+    "s_39d0bbc14cf3a4": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1791463677537",
+        "model": "unknown"
+      },
+      "human_author": "Nhat <contact@nhat.me>"
+    }
+  }
+}
