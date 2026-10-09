@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "4271ef74a09575c279dabbcc983477467071e068",
+  "prompts": {},
+  "humans": {
+    "h_1bffb29edaf571": {
+      "author": "Nhat <contact@nhat.me>"
+    }
+  }
+}
