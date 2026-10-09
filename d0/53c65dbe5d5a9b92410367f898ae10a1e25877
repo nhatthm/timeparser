@@ -1,0 +1,36 @@
+README.md
+  s_39d0bbc14cf3a4::t_46c193f582bb28 8
+  s_39d0bbc14cf3a4::t_bec3c63771d7e6 36,38,42-44
+  h_1bffb29edaf571 14
+Makefile
+  s_39d0bbc14cf3a4::t_59b8818903c71d 3
+  s_39d0bbc14cf3a4::t_31a681a1bcbc23 8-24,27-37,40-48,56-57,61-62,66-67,70-86
+.golangci.yaml
+  s_39d0bbc14cf3a4::t_3c5918c719f0c4 4
+  s_39d0bbc14cf3a4::t_ae1ee607250f5b 15
+  s_39d0bbc14cf3a4::t_b7a90db2aa4656 27
+  s_39d0bbc14cf3a4::t_b6758da3a4e52b 28-30
+go.mod
+  h_1bffb29edaf571 3,5,7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.15",
+  "base_commit_sha": "d053c65dbe5d5a9b92410367f898ae10a1e25877",
+  "prompts": {},
+  "humans": {
+    "h_1bffb29edaf571": {
+      "author": "Nhat <contact@nhat.me>"
+    }
+  },
+  "sessions": {
+    "s_39d0bbc14cf3a4": {
+      "agent_id": {
+        "tool": "github-copilot-jetbrains",
+        "id": "1791463677537",
+        "model": "unknown"
+      },
+      "human_author": "Nhat <contact@nhat.me>"
+    }
+  }
+}
