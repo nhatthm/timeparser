@@ -5,13 +5,13 @@
 [![codecov](https://codecov.io/gh/nhatthm/timeparser/branch/master/graph/badge.svg?token=eTdAgDE2vR)](https://codecov.io/gh/nhatthm/timeparser)
 [![Go Report Card](https://goreportcard.com/badge/go.nhat.io/timeparser)](https://goreportcard.com/report/go.nhat.io/timeparser)
 [![GoDevDoc](https://img.shields.io/badge/dev-doc-00ADD8?logo=go)](https://pkg.go.dev/go.nhat.io/timeparser)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=PJZSGJN57TDJY)
+[![Donate](https://img.shields.io/badge/%20-Donate-%20?style=flat&logo=githubsponsors&color=E5E4E2)](http://donate.nhat.me)
 
 `timeparser` provides flexibility in parsing time from string for Golang. It allows either `RFC3339` or `YMD`.
 
 ## Prerequisites
 
-- `Go >= 1.17`
+- `Go >= 1.23`
 
 ## Install
 
@@ -33,12 +33,12 @@ Parse a time period from `string` to `time.Time`.
 
 ## Donation
 
-If this project help you reduce time to develop, you can give me a cup of coffee :)
+If this project saved you some development time, buy me a cup of coffee :)
 
-### Paypal donation
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=PJZSGJN57TDJY)
+[![donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](http://donate.nhat.me)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or scan this
 
-<img src="https://user-images.githubusercontent.com/1154587/113494222-ad8cb200-94e6-11eb-9ef3-eb883ada222a.png" width="147px" />
+<img src="https://github.com/nhatthm/donate.nhat.me/blob/master/images/qr_sponsor.png" width="147px" />
+
+[<sub><sup>[table of contents]</sup></sub>](#table-of-contents)
