@@ -3,7 +3,6 @@
 [![GitHub Releases](https://img.shields.io/github/v/release/nhatthm/timeparser)](https://github.com/nhatthm/timeparser/releases/latest)
 [![Build Status](https://github.com/nhatthm/timeparser/actions/workflows/test.yaml/badge.svg)](https://github.com/nhatthm/{}name/actions/workflows/test.yaml)
 [![codecov](https://codecov.io/gh/nhatthm/timeparser/branch/master/graph/badge.svg?token=eTdAgDE2vR)](https://codecov.io/gh/nhatthm/timeparser)
-[![Go Report Card](https://goreportcard.com/badge/go.nhat.io/timeparser)](https://goreportcard.com/report/go.nhat.io/timeparser)
 [![GoDevDoc](https://img.shields.io/badge/dev-doc-00ADD8?logo=go)](https://pkg.go.dev/go.nhat.io/timeparser)
 [![Donate](https://img.shields.io/badge/%20-Donate-%20?style=flat&logo=githubsponsors&color=E5E4E2)](http://donate.nhat.me)
 
